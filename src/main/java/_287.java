@@ -49,7 +49,37 @@ public class _287 {
 
     for (int i = 0; i < nums.length; i++) {
       int val = Math.abs(nums[i]);
-
+      /**
+       * as numbers are from 1 to n+1
+       * and array is 0 based, so for each value we will subtract 1
+       *
+       * [1, 3, 4, 2, 2]
+       *
+       * nums[0] = 1
+       * so 1 - 1 = 0
+       * nums[0] = -1 * 1
+       *
+       * [-1, 3, 4, 2, 2]
+       *
+       * nums[1] = 3
+       * nums[3 - 1] = nums[2] = 4
+       * nums[2] = -4
+       *
+       * [-1, 3, -4, 2, 2]
+       *
+       * nums[2] = -4
+       * Math.abs(-4) = 4
+       *
+       * nums[4-1] = nums[3] = 2
+       * [-1, 3, -4, -2, 2]
+       * [-1, -3, -4, -2, 2]
+       *
+       * nums[2 - 1] = 1
+       * nums[1] = -3
+       *
+       * since we have already negated value at this index, thus this is repeated number
+       * return 2
+       */
       if (nums[val - 1] > 0) {
           nums[val - 1] = -1 * nums[val - 1];
       } else {
