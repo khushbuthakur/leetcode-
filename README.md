@@ -1,5 +1,7 @@
 # [LeetCode](https://leetcode.com/problemset/algorithms/)
 
+All 170 questions, extended list of Blin 75
+
 
 |  #  |      Title     |   Solutions   | Video  | Difficulty  | Tag                   
 |-----|----------------|---------------|--------|-------------|-------------
